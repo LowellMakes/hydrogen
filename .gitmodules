@@ -1,6 +1,3 @@
 [submodule "src/kobuki"]
 	path = src/kobuki
 	url = https://github.com/yujinrobot/kobuki
-[submodule "src/ros_depthsense_camera"]
-	path = src/ros_depthsense_camera
-	url = https://github.com/Myzhar/ros_depthsense_camera
