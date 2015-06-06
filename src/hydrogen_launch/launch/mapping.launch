@@ -2,13 +2,11 @@
 <!-- Machine Definitions -->
   <include file="$(find hydrogen_launch)/include/machines.launch"/>
 
-<!-- Motors -->
+<!-- Kobuki -->
+  <include file="$(find kobuki_node)/launch/robot_with_tf.launch"/>
 
 <!-- Sensors -->
   <include file="$(find hydrogen_launch)/include/sensors.launch"/>
-
-<!-- Joint States -->
-  <include file="$(find hydrogen_launch)/include/description.launch"/>
 
 <!-- Alvar -->
   <!--<include file="$(find hydrogen_launch)/include/alvar.launch"/>-->
