@@ -1,66 +1,19 @@
 <?xml version="1.0"?>
-<robot name="hydrogen" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="hydrogen"
+       xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:property name="PI" value="3.1415926535897931"/>
-  <xacro:property name="IN2M" value="0.0254"/>
-  <xacro:property name="LBS2KG" value="0.453592"/>
+  <xacro:property name="lidardx" value="${.127}"/>
+  <xacro:property name="lidardz" value="${.203}"/>
 
-  <xacro:property name="chassisHeight" value="${47*IN2M}"/>
-  <xacro:property name="chassisRadius" value="${12*IN2M}"/>
-  <xacro:property name="chassisMass" value="${80*LBS2KG}"/>
-
-  <xacro:property name="cameraSize" value="0.05"/>
-  <xacro:property name="cameradx" value="${chassisRadius}"/>
-  <xacro:property name="cameradz" value="${11*IN2M}"/>
-
-  <xacro:property name="lidardx" value="${chassisRadius-.05}"/>
-  <xacro:property name="lidardz" value="${13.9*IN2M}"/>
-
-  <xacro:include filename="$(find hydrogen_description)/urdf/macros.xacro" />
-
-  <!--Basic cylinder robot model with Collada visual mesh -->
-  <link name="base_link">
-    <inertial>
-      <mass value="${chassisMass*100}" />
-      <origin xyz="0 0 0" />
-      <cylinder_inertia m="${chassisMass*100}" r="${chassisRadius}" h="${chassisHeight/10}" />
-    </inertial>
-    <visual>
-      <origin xyz="0 0 0"/>
-      <geometry>
-        <mesh filename="package://hydrogen_description/meshes/hydrogen.dae" scale="0.001 0.001 0.001"/> 
-      </geometry>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" />
-      <geometry>
-        <cylinder length="${chassisHeight}" radius="${chassisRadius}" />
-      </geometry>
-    </collision>
-  </link>
-
-
-  <joint name="camera_joint" type="fixed">
-    <axis xyz="0 0 0" />
-    <origin xyz="${cameradx} 0 ${cameradz}" rpy="${PI/2} ${-PI} ${PI/2}"/>
-    <parent link="base_link"/>
-    <child link="camera_link"/>
-  </joint>
-
-  <link name="camera_link">
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <box size="0.05 0.05 0.05"/>
-      </geometry>
-    </collision>
-  </link>
+  <!-- include the kobuki base -->
+  <xacro:include filename="$(find kobuki_description)/urdf/kobuki.urdf.xacro" />
+  <kobuki/>
 
   <joint name="hokuyo_joint" type="fixed">
     <axis xyz="0 1 0" />
-    <origin xyz="${lidardx} 0 ${lidardz}" rpy="0 0 0" />
-    <parent link="base_link"/>
-    <child link="laser"/>
+    <origin xyz="${lidardx} 0 ${lidardz}" rpy="0 0 0 " />
+    <parent link="base_link" />
+    <child link="laser" />
   </joint>
 
   <link name="laser">
