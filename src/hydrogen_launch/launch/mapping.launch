@@ -3,7 +3,7 @@
   <include file="$(find hydrogen_launch)/include/machines.launch"/>
 
 <!-- Kobuki -->
-  <include file="$(find kobuki_node)/launch/robot_with_tf.launch"/>
+  <include file="$(find hydrogen_launch)/include/kobuki.launch"/>
 
 <!-- Sensors -->
   <include file="$(find hydrogen_launch)/include/sensors.launch"/>
