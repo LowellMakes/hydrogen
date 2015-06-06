@@ -1,3 +1,6 @@
 [submodule "src/kobuki"]
 	path = src/kobuki
 	url = https://github.com/yujinrobot/kobuki
+[submodule "src/softkinetic"]
+	path = src/softkinetic
+	url = https://github.com/ipa320/softkinetic
