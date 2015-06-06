@@ -1,0 +1,7 @@
+<launch>
+
+<!-- Visualization -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find hydrogen_launch)/hydrogen.rviz"/>
+ <!-- <node name="rqt_reconfigure" pkg="rqt_reconfigure" type="rqt_reconfigure"/>-->
+
+</launch>

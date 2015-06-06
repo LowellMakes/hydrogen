@@ -1,2 +1,3 @@
-# hydrogen
-LowellMakes little mobile manipulator!
+# babbage
+Repository for Babbage code development.
+

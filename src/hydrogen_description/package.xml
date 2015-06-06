@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+  <name>hydrogen_description</name>
+
+  <version>0.0.1</version>
+  <description>The hydrogen_description package</description>
+
+  <author email="powers.bradley@gmail.com">Bradley Powers</author>
+  <maintainer email="powers.bradley@gmail.com">Bradley Powers</maintainer>
+
+
+  <license>TODO</license>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+</package>

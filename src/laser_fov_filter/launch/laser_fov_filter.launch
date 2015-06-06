@@ -1,0 +1,11 @@
+<launch>
+
+    <arg name="laser_angle_cutoff" default="45.0"/>
+
+    <node pkg="laser_fov_filter" type="laser_fov_filter_node" name="laser_fov_filter" output="screen">
+        <param name="input" value="/scan"/>
+        <param name="output" value="/scan_marking"/>
+        <param name="cutoff_angle" value="$(arg laser_angle_cutoff)"/>
+    </node>
+
+</launch>

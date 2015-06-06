@@ -1,0 +1,28 @@
+<launch>
+<!-- Machine Definitions -->
+  <include file="$(find hydrogen_launch)/include/machines.launch"/>
+
+<!-- Motors -->
+
+<!-- Sensors -->
+  <include file="$(find hydrogen_launch)/include/sensors.launch"/>
+
+<!-- Joint States -->
+  <include file="$(find hydrogen_launch)/include/description.launch"/>
+
+<!-- Alvar -->
+  <!--<include file="$(find hydrogen_launch)/include/alvar.launch"/>-->
+
+<!-- AMCL -->
+  <!--<include file="$(find hydrogen_launch)/include/amcl.launch"/>-->
+
+<!-- Hector SLAM -->
+  <include file="$(find hydrogen_launch)/include/hector.launch"/>
+
+<!-- Map Server -->
+  <!--<node name="map_server" pkg="map_server" type="map_server" args="$(find hydrogen_launch)/maps/lm.yaml" />-->
+
+<!-- Navigation -->
+  <include file="$(find hydrogen_2dnav)/launch/move_base.launch"/>
+
+</launch>

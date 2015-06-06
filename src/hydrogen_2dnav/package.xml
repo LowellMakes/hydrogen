@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+  <name>hydrogen_2dnav</name>
+  <version>0.0.1</version>
+  <description>The hydrogen_2dnav package</description>
+
+  <author email="powers.bradley@gmail.com">Bradley Powers</author>
+  <maintainer email="powers.bradley@gmail.com">Bradley Powers</maintainer>
+
+
+  <license>TODO</license>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>move_base</build_depend>
+  <run_depend>move_base</run_depend>
+</package>

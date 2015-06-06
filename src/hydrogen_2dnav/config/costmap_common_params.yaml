@@ -1,0 +1,12 @@
+robot_radius: 0.26
+track_unkown_space: true
+inflation_layer:
+  cost_scaling_factor: 4.0
+  inflation_radius: 1.0
+obstacle_layer:
+  max_obstacle_height: 0.5
+  observation_sources: laser_clearing laser_marking
+  obstacle_range: 9.0
+  raytrace_range: 10.0
+  laser_clearing: {data_type: LaserScan, sensor_frame: laser, topic: /scan, marking: false, clearing: true, expected_update_rate: 0.2}
+  laser_marking: {data_type: LaserScan, sensor_frame: laser, topic: /scan_marking, marking: true, clearing: false, expected_update_rate: 0.2}
